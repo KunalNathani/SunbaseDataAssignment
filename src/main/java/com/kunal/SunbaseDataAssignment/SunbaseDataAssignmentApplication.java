@@ -9,5 +9,4 @@ public class SunbaseDataAssignmentApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SunbaseDataAssignmentApplication.class, args);
 	}
-
 }
