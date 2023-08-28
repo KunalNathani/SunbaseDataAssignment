@@ -42,12 +42,12 @@ public class CustomersController {
     }
 
 
-    @PostMapping("/customer/store")
+    @PostMapping("/customers/store")
     public String store(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes) {
         boolean status = customerService.addCustomer(customer, this.getToken());
         redirectAttributes.addFlashAttribute("status", status ? "success" : "danger");
         redirectAttributes.addFlashAttribute("message", status ? "Created new Customer!" : "Error while Creating Customer");
-        return "redirect://customers/all";
+        return "redirect:/customers/all";
     }
 
     @GetMapping("/customers/create")
